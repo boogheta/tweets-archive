@@ -7,21 +7,30 @@ html {
 body {
 	max-width: 60em;
 	min-height: 100%;
+	font-size: 16px;
 	font-family: system-ui, sans-serif;
 	margin: 0 auto;
 	padding: .5em;
+    background-color: black;
+    color: white;
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
 }
 footer {
-	font-size: 0.875em; /* 14px /16 */
+	font-size: 14px;
 	margin-top: 1em;
-	border-top: 1px solid #eee;
+	border-top: 1px solid #555;
 	padding: 1em 0 0;
 	font-style: italic;
 }
 :link,
 :visited {
-	color: #1C4A1D;
-	text-decoration-color: #17bf63;
+	color: rgb(29, 205, 250);
+    text-decoration: none;
+}
+h1 :link, h1 :visited, h2 :link, h2 :visited {
+    color: white;
+    text-decoration: underline;
 }
 .sr-only {
 	position: absolute !important;
@@ -95,6 +104,10 @@ button {
 }
 .tweets-nav li {
 	display: inline-block;
+    color: #ccc!important;
+}
+.tweets-nav li a {
+    color: #ccc!important;
 }
 @media (min-width: 48em) { /* 768px */
 	.tweets-nav {
@@ -102,12 +115,12 @@ button {
 	}
 }
 .tweets-primary-count {
-	font-size: 4em;
-	margin: 2em 0 1em;
-	padding: 0 0 2em;
-	text-align: center;
-	border-bottom: 2px solid #eee;
-	font-weight: 400;
+    font-size: 1em;
+    margin: -37px 0 0 0;
+    padding: 0 0 0 20px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    line-height: 50px;
 }
 .tweets-primary-count-num {
 	font-weight: 900;
@@ -121,7 +134,7 @@ button {
 }
 .tweets .tweets-replies {
 	padding-left: 1em;
-	border-left: 2px solid rgba(0,0,0,0.1);
+	border-left: 1px solid #555;
 	margin-left: -.75em;
 }
 .tweets .tweets-replies:empty {
@@ -133,14 +146,13 @@ button {
 	margin-bottom: 15vh;
 }
 .tweets-linear-list .tweet {
-	margin-bottom: 3.5rem;
-	padding-bottom: 3.5rem;
-	border-bottom: 1px solid #ccc;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #555;
 }
 
 /* Individual tweet */
 .is_retweet .tweet-text {
-	opacity: .6;
 	font-style: italic;
 }
 .tweet-text {
@@ -157,7 +169,6 @@ button {
 }
 .tweet-username,
 .tweet-username:visited {
-	color: inherit;
 	font-size: 0.9545454545455em; /* 21px /22 */
 }
 .tweet-pretext {
@@ -168,7 +179,7 @@ button {
 }
 .tweet-pretext,
 .tweet-pretext:visited {
-	color: #555;
+	color: #aaa;
 }
 .tweet-metadata {
 	display: block;
@@ -182,14 +193,10 @@ button {
 
 /* Individual tweet */
 .tweet {
-	font-size: 1.625em; /* 26px /16 */
-	margin: 0 0 3.5rem;
+	font-size: 16px;
+	margin: 0 0 1.5rem;
 	padding: 0;
 	list-style: none;
-}
-.tweet.is_reply,
-.tweet.is_retweet {
-	font-size: 1.375em; /* 22px /16 */
 }
 .tweet-next .tweet-text,
 .tweet-previous .tweet-text {
@@ -234,7 +241,7 @@ img.tweet-media {
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 1px solid #ccc;
+	border: 1px solid #555;
 }
 video.tweet-media {
 	max-width: 100%;
@@ -321,30 +328,31 @@ img.tweet-media-og {
 	overflow: hidden;
 }
 .tag-naked {
-	background-color: #fff;
-	color: #757575;
+	background-color: black;
+	color: #ccc;
 }
 .tweet-metadata .tag-naked:link,
 .tweet-metadata .tag-naked:visited {
 	color: #757575;
+    background-color: black;
 }
 .tag:first-child,
 .tag + .tag {
 	margin-left: 0;
 }
 .tag-favorite {
-	background-color: #e0245e;
+	background-color: #ccc;
 	border-color: #e0245e;
 }
 .tag-retweet {
-	background-color: #397d58;
+	background-color: #ccc;
 	border-color: #397d58;
 }
 .tag-lite.tag-favorite,
 .tag-lite.tag-retweet {
-	background-color: #fff;
+	background-color: #ccc;
 	border-color: transparent;
-	font-weight: inherit;
+	font-weight: bold;
 }
 .tag-lite.tag-favorite {
 	color: #e0245e;
